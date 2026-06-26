@@ -1,183 +1,520 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
-body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
-</style>    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Verification</title>
-      <style>   
-        /* Reset some basic styles */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            height: 100%;
-            overflow-x: hidden;
-        }
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="title" content="BestOnlineGame – Discover Joy in Play">
 
-        /* Background sections */
-        .background-section {
-            height: 100vh; /* Full viewport height */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-        }
+  <meta name="description" content="18+ ONLY. Free Social Games. Strictly no real money games or prizes. bestonlinegame.site">
 
-        /* Overlay for background sections */
-        .background-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-            z-index: 1;
-        }
-        /* Container for the age verification page, fixed in place */
-       
-  /* Overlay background */
-  .age-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(232, 225, 225, 0.9);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99999;
-  }
- 
-  /* Popup box */
-  .age-popup {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-  }
- 
-  .age-popup h2 {
-    margin-bottom: 15px;
-    font-size: 22px;
-    font-weight: bold;
-  }
- 
-  .age-popup p {
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: #444;
-  }
- 
-  .age-buttons button {
-    margin: 5px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-    background-color: #007b8f;
-    color: white;
-    transition: background 0.3s;
-  }
- 
-  .age-buttons button:hover {
-    background-color: #005f6a;
-  }
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.bestonlinegame.site">
+  <meta property="og:title" content="BestOnlineGame – Your Next Adventure Awaits">
+  <meta property="og:description" content="Explore BestOnlineGame for card challenges, puzzle adventures, spin-inspired games, and slot-style entertainment — all crafted for smooth, enjoyable gameplay on desktops, tablets, and mobile devices.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>BestOnlineGame - Entertainment Without Limits</title>
 
 
-        .logo {
-            max-width: 150px;
-            margin-bottom: 5px;
-        }
 
-        .content h1 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: #000;
-        }
 
-        .content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #000;
-        }
 
-        .buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
 
-        .btn {
-            background-color: #0081a1;
-            color: rgb(255, 255, 255);
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 700;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #0b00a1;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive styling */
-        @media (max-width: 480px) {
-            .age-verification-container {
-                width: 300px;
-                height: 300px;
-            }
-
-            .logo {
-                max-width: 100px;
-            }
-
-            .content h1 {
-                font-size: 15px;
-            }
-
-            .content p {
-                font-size: 0.9rem;
-            }
-
-            .btn {
-                padding: 8px 15px;
-                font-size: 0.9rem;
-            }
-              
-        }
-    </style>
 </head>
-<body cz-shortcut-listen="true">
-    <!-- Fixed age verification container -->
-   <!-- Age Verification Popup -->
+
+<body>
+  <div class="main">
+    <div class="header">
+      <div class="main-menu">
+        <div class="logo"><span class="heading-shade">BestOnlineGame</span></div>
+        <div class="menu-items">
+
+          <a href="index.html" class="menu-item">Home</a>
+          <a href="index.html#about" class="menu-item">About</a>
+          <a href="index.html#top-games" class="menu-item">Games</a>
+          <a href="contact-us.html" class="menu-item">Contact</a>
+        </div>
+
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-content-text">
+        <h1>Highly Rated Games</h1>
+        <h2>Discover Fun Instantly</h2>
+        <p>Play, explore, and enjoy endless fun with easy signup today.</p>
+        <button class="hero-button">
+          <a href="#top-games" class="menu-item">Quick &amp; Easy Access Now</a>
+        </button>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+  <div class="user-numbers">
+    <div class="user-numbers-main">
+
+      <div class="user-numbers-content">
+        <h1>Trusted by Millions</h1>
+        <p>Register now and start playing instantly.</p>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="user-number-blocks">
+        <div class="block-1">
+          <p>Quick &amp; Easy Access</p>
+        </div>
+        <div class="block-1">
+          <p>Enjoy Anytime, Anywhere</p>
+        </div>
+        <div class="block-1">
+          <p>Smooth Gameplay Experience</p>
+        </div>
+        <div class="block-1">
+          <p>Trusted &amp; Device-Friendly</p>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+  <!-- <div class="tiles-content">
+            <div class="tiles-heading"><h2>Why Choose</h2></div>
+            <div class="tiles-cards">
+            <div class="card">
+                <h2>Endless Fun, Unlimited Rewards!</h2>
+            </div>
+            <div class="card">
+                <h2>Spin, Play, and Level Up</h2>
+            </div>
+            <div class="card">
+                <h2>Collect, Compete, Conquer</h2>
+            </div>
+            <div class="card">
+                <h2>The Ultimate Social Casino Experience</h2>
+            </div>
+        </div>
+        </div> -->
+
+
+
+
+  <div class="top-games" id="top-games">
+    <h1>Play, Relax, Repeat</h1>
+
+
+
+    <div class="container">
+      <div class="Firth hero">
+        <img class="hero-profile-img" src="images/1.png" alt="">
+        <div class="hero-description-bk"></div>
+        <!-- <div class="hero-logo">
+          <img src="https://miscmedia-9gag-fun.9cache.com/images/thumbnail-facebook/1557291375.3948_Dy2yZu_n.jpg"
+            alt="">
+        </div> -->
+        <div class="hero-description">
+
+        </div>
+        <div class="hero-date">
+          <p>Scourge of Rome</p>
+        </div>
+        <div class="hero-btn">
+          <a href="scourgeofrome.html">Play Now</a>
+        </div>
+      </div>
+
+
+      <div class="Firth hero">
+        <img class="hero-profile-img" src="images/2.png" alt="">
+        <div class="hero-description-bk"></div>
+        <!-- <div class="hero-logo">
+          <img src="https://miscmedia-9gag-fun.9cache.com/images/thumbnail-facebook/1557291375.3948_Dy2yZu_n.jpg"
+            alt="">
+        </div> -->
+        <div class="hero-description">
+
+        </div>
+        <div class="hero-date">
+          <p>Rich Wilde <br> the Tome of Dead</p>
+        </div>
+        <div class="hero-btn">
+          <a href="RichWilde.html">Play Now</a>
+        </div>
+      </div>
+
+
+
+      <div class="Firth hero">
+        <img class="hero-profile-img" src="images/3.png" alt="">
+        <div class="hero-description-bk"></div>
+        <!-- <div class="hero-logo">
+          <img src="https://miscmedia-9gag-fun.9cache.com/images/thumbnail-facebook/1557291375.3948_Dy2yZu_n.jpg"
+            alt="">
+        </div> -->
+        <div class="hero-description">
+
+        </div>
+        <div class="hero-date">
+          <p>King of Sweets</p>
+        </div>
+        <div class="hero-btn">
+          <a href="KingofSweets.html">Play Now </a>
+        </div>
+      </div>
+
+      <div class="Firth hero">
+        <img class="hero-profile-img" src="images/4.png" alt="">
+        <div class="hero-description-bk"></div>
+        <!-- <div class="hero-logo">
+          <img src="https://miscmedia-9gag-fun.9cache.com/images/thumbnail-facebook/1557291375.3948_Dy2yZu_n.jpg"
+            alt="">
+        </div> -->
+        <div class="hero-description">
+
+        </div>
+        <div class="hero-date">
+          <p>Medusa's Madness</p>
+        </div>
+        <div class="hero-btn">
+          <a href="MedusaMadness.html">Play Now</a>
+        </div>
+      </div>
+
+
+      <div class="Firth hero">
+        <img class="hero-profile-img" src="images/5.png" alt="">
+        <div class="hero-description-bk"></div>
+        <!-- <div class="hero-logo">
+          <img src="https://miscmedia-9gag-fun.9cache.com/images/thumbnail-facebook/1557291375.3948_Dy2yZu_n.jpg"
+            alt="">
+        </div> -->
+        <div class="hero-description">
+
+        </div>
+        <div class="hero-date">
+          <p>Moon Princess</p>
+        </div>
+        <div class="hero-btn">
+          <a href="MoonPrincess.html">Play Now</a>
+        </div>
+      </div>
+
+
+      <div class="Firth hero">
+        <img class="hero-profile-img" src="images/6.png" alt="">
+        <div class="hero-description-bk"></div>
+        <!-- <div class="hero-logo">
+          <img src="https://miscmedia-9gag-fun.9cache.com/images/thumbnail-facebook/1557291375.3948_Dy2yZu_n.jpg"
+            alt="">
+        </div> -->
+        <div class="hero-description">
+
+        </div>
+        <div class="hero-date">
+          <p>Invading Vegas: <br>Las Christmas</p>
+        </div>
+        <div class="hero-btn">
+          <a href="InvadingVegas.html">Play Now</a>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+  </div>
+  <div class="about-us" id="about">
+    <h1>About Us</h1>
+
+    <div class="about-content">
+      <img src="images/Untitled_design-removebg-preview.png" alt="">
+      <p>
+        Welcome to <strong>BestOnlineGame</strong>, your go-to space for smooth, carefree digital fun.<br>
+        Dive into card-style challenges, relaxing puzzles, spin-inspired games, and slot-style adventures — all designed
+        for seamless play across desktops, tablets, and mobile devices.<br>
+        Jump in anytime to enjoy stress-free, purely recreational gaming created entirely for your enjoyment.
+      </p>
+    </div>
+
+
+
+  </div>
+
+  
+  <!-- <div class="container"> -->
+  <div class="team">
+    <h1>Meet the <span class="heading-shade">Team Behind BestOnlineGame</span></h1>
+    <p>
+      At <strong>BestOnlineGame</strong>, our dedicated team of game enthusiasts crafts experiences that are smooth,
+      reliable, and fun. Every feature is carefully designed to ensure seamless play across desktops, tablets,
+      and mobile devices.
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="team-profile">
+      <div class="main-profile">
+        <img src="images/42.png" alt="Noah Carter – Gameplay Director at BestOnlineGame">
+        <h3>Noah Carter</h3>
+        <p>Gameplay Director</p>
+      </div>
+
+      <div class="main-profile">
+        <img src="images/42.png" alt="Sophia Bennett – User Experience Lead at BestOnlineGame">
+        <h3>Sophia Bennett</h3>
+        <p>User Experience Lead</p>
+      </div>
+
+      <div class="main-profile">
+        <img src="images/42.png" alt="Lucas Hayes – Operations Manager at BestOnlineGame">
+        <h3>Lucas Hayes</h3>
+        <p>Operations Manager</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- </div> -->
+
+
+
+  </div>
+
+  <!--FAQ-->
+  <div class="faq-main">
+    <h1 class="faq-main-heading">
+      Frequently Asked Questions <span class="heading-shade">About bestonlinegame.site</span>
+    </h1>
+
+    <div class="faq">
+
+      <button class="accordion">Which games can I play here?</button>
+      <div class="panel">
+        <p>
+          <strong>bestonlinegame.site</strong> includes an assortment of fun digital games, from card-style challenges
+          and puzzles to spin-inspired and slot-style formats — all created for smooth, casual play.
+        </p>
+      </div>
+
+      <button class="accordion">Do I need to register?</button>
+      <div class="panel">
+        <p>
+          No sign-up is needed. Open any game in your browser and start playing immediately — no account required.
+        </p>
+      </div>
+
+      <button class="accordion">Is it just for entertainment?</button>
+      <div class="panel">
+        <p>
+          Yes. bestonlinegame.site is designed strictly for enjoyable digital play with no real-world value or financial
+          stakes.
+        </p>
+      </div>
+
+      <button class="accordion">Can I switch between devices?</button>
+      <div class="panel">
+        <p>
+          Definitely. The games run smoothly on desktops, tablets, and mobile devices to ensure a consistent experience
+          everywhere.
+        </p>
+      </div>
+
+      <button class="accordion">Where can I find help?</button>
+      <div class="panel">
+        <p>
+          Check out our <a href="support.html">support page</a> for tutorials, tips, and answers to common questions.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+
+
+
+  <div class="footer">
+    <div class="footer-content">
+      <p class="footer-content-text">
+        Sign In & Play Now<br>Play anytime, explore the top games, and enjoy endless entertainment.
+      </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="disclaimer-text" style="border: 2px solid #ff4444; padding: 15px; margin: 20px 0; background: rgba(255,0,0,0.1); font-size: 1.1em; font-weight: bold; color: #fff;">
+      <p>
+        <strong>DISCLAIMER:</strong> This website and all content are intended for users aged 18 and older.
+        <strong>bestonlinegame.site</strong> provides free-to-access digital games created solely for entertainment
+        purposes.
+        The platform does not allow financial transactions or real-money play, and all gameplay outcomes have no
+        real-world value.
+        Using this website does not imply or guarantee any results beyond the platform.
+      </p>
+
+
+
+    </div>
+
+    <div class="footer-logo-part">
+      <div class="logo-main">
+        <div class="logo-main-footer">
+          <div class="logo"><span class="heading-shade">BestOnlineGame</span></div>
+          <div class="footers-links">
+            <a href="privacy-policy.html" class="menu-item">Privacy</a>
+            <a href="term-conditions.html" class="menu-item">T&amp;C</a>
+            <a href="cookie-policy.html" class="menu-item">Cookies</a>
+            <a href="contact-us.html" class="menu-item">Contact</a>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="bottom-footer">
+      <p>2025 © bestonlinegame.site. All content reserved.</p>
+
+
+
+      <div class="social-media">
+        <a href="#"><i class="fa-brands fa fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa fa-instagram"></i></a>
+        <img class="disclaimer" src="images/18.png" alt="">
+      </div>
+    </div>
+  </div>
+  
+<!-- Age Verification Popup -->
 <div id="age-verification" class="age-overlay">
   <div class="age-popup">
     <h2>Age Verification</h2>
@@ -193,27 +530,45 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
   document.addEventListener("DOMContentLoaded", function () {
     var yesBtn = document.getElementById("btn-yes");
     var noBtn = document.getElementById("btn-no");
+    var ageOverlay = document.getElementById("age-verification");
  
-    // Change these URLs as you want
-    var yesLink = "http://coinzest.site/?utm_campaign=GL7c7xwY4G&v1=[v1]&v2=[v2]&v3=[v3]";  
-    var noLink = "#";  
+    if (yesBtn && ageOverlay) {
+      yesBtn.addEventListener("click", function () {
+        ageOverlay.style.display = "none";
+      });
+    }
  
-    yesBtn.addEventListener("click", function () {
-      window.location.href = yesLink;
-    });
- 
-    noBtn.addEventListener("click", function () {
-      window.location.href = noLink;
-    });
+    if (noBtn) {
+      noBtn.addEventListener("click", function () {
+        alert("You must be 18 or older to access this site.");
+      });
+    }
   });
 </script>
 
-    <!-- First background section -->
-    <div id="section1" class="background-section"></div>
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
 
-    <!-- Second background section -->
-    <div id="section2" class="background-section"></div>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
 
-    <!-- Third background section -->
-    <div id="section3" class="background-section"></div>
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+
+
+
+    <div style="text-align: center; padding: 15px; font-size: 0.9em; color: #a0a0a0; font-family: sans-serif;">
+        18+ ONLY | THIS IS A FREE SOCIAL GAMES PLATFORM | NO REAL MONEY GAMES OR PRIZES OFFERED
+    </div>
+
 </body></html>
